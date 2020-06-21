@@ -24,5 +24,8 @@ urlpatterns = [
     # 1. Opção de redirect para uma página padrão
     #path('', views.index)
     # 2. Opção de redirect para uma página padrão
-    path('', RedirectView.as_view(url='/agenda/'))
+    path('', RedirectView.as_view(url='/agenda/')),
+    path('login/', views.login_user),
+    path('login/submit', views.submit_login),
+    path('logout/', views.logout_user)
 ]
